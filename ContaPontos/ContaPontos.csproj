@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13A2EBE5-DD67-4911-9937-EFB82DBEBF63}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContaPontos</RootNamespace>
+    <AssemblyName>ContaPontos</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ContaPontos_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>ContaPontos.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Books.cs" />
+    <Compile Include="Config.xaml.cs">
+      <DependentUpon>Config.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Disponibilidade.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pontos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TiposApartamentos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Config.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Imagem\500px.png" />
+    <Content Include="Assets\Imagem\amazon.png" />
+    <Content Include="Assets\Imagem\arrow-direction.png" />
+    <Content Include="Assets\Imagem\arrow-left.png" />
+    <Content Include="Assets\Imagem\arrow-right.png" />
+    <Content Include="Assets\Imagem\back.png" />
+    <Content Include="Assets\Imagem\bar-graph.png" />
+    <Content Include="Assets\Imagem\behance.png" />
+    <Content Include="Assets\Imagem\cancel.png" />
+    <Content Include="Assets\Imagem\cart-bubble.png" />
+    <Content Include="Assets\Imagem\cart.png" />
+    <Content Include="Assets\Imagem\check-1.png" />
+    <Content Include="Assets\Imagem\check-2.png" />
+    <Content Include="Assets\Imagem\circle.png" />
+    <Content Include="Assets\Imagem\cloud-download.png" />
+    <Content Include="Assets\Imagem\cloud-upload.png" />
+    <Content Include="Assets\Imagem\creditcard.png" />
+    <Content Include="Assets\Imagem\database-add.png" />
+    <Content Include="Assets\Imagem\database-delete.png" />
+    <Content Include="Assets\Imagem\database.png" />
+    <Content Include="Assets\Imagem\delete.png" />
+    <Content Include="Assets\Imagem\document.png" />
+    <Content Include="Assets\Imagem\dots.png" />
+    <Content Include="Assets\Imagem\double-quotes.png" />
+    <Content Include="Assets\Imagem\download.png" />
+    <Content Include="Assets\Imagem\dropbox.png" />
+    <Content Include="Assets\Imagem\eject.png" />
+    <Content Include="Assets\Imagem\evernote.png" />
+    <Content Include="Assets\Imagem\facebook.png" />
+    <Content Include="Assets\Imagem\fast-forward.png" />
+    <Content Include="Assets\Imagem\flikr.png" />
+    <Content Include="Assets\Imagem\fullscreen-1.png" />
+    <Content Include="Assets\Imagem\fullscreen-2.png" />
+    <Content Include="Assets\Imagem\gear.png" />
+    <Content Include="Assets\Imagem\gears.png" />
+    <Content Include="Assets\Imagem\globe.png" />
+    <Content Include="Assets\Imagem\google-plus.png" />
+    <Content Include="Assets\Imagem\group.png" />
+    <Content Include="Assets\Imagem\heart.png" />
+    <Content Include="Assets\Imagem\home.png" />
+    <Content Include="Assets\Imagem\info-1.png" />
+    <Content Include="Assets\Imagem\info-2.png" />
+    <Content Include="Assets\Imagem\info-3.png" />
+    <Content Include="Assets\Imagem\lastfm.png" />
+    <Content Include="Assets\Imagem\line-graph.png" />
+    <Content Include="Assets\Imagem\linkedin.png" />
+    <Content Include="Assets\Imagem\list.png" />
+    <Content Include="Assets\Imagem\location.png" />
+    <Content Include="Assets\Imagem\loud.png" />
+    <Content Include="Assets\Imagem\maginfy-plus.png" />
+    <Content Include="Assets\Imagem\magnify-minus.png" />
+    <Content Include="Assets\Imagem\mail.png" />
+    <Content Include="Assets\Imagem\message-2.png" />
+    <Content Include="Assets\Imagem\message.png" />
+    <Content Include="Assets\Imagem\microphone.png" />
+    <Content Include="Assets\Imagem\minus.png" />
+    <Content Include="Assets\Imagem\money.png" />
+    <Content Include="Assets\Imagem\mute.png" />
+    <Content Include="Assets\Imagem\pause.png" />
+    <Content Include="Assets\Imagem\pencil.png" />
+    <Content Include="Assets\Imagem\person.png" />
+    <Content Include="Assets\Imagem\phone.png" />
+    <Content Include="Assets\Imagem\picture.png" />
+    <Content Include="Assets\Imagem\pie-chart.png" />
+    <Content Include="Assets\Imagem\pintrest.png" />
+    <Content Include="Assets\Imagem\play.png" />
+    <Content Include="Assets\Imagem\plus.png" />
+    <Content Include="Assets\Imagem\podcast.png" />
+    <Content Include="Assets\Imagem\power.png" />
+    <Content Include="Assets\Imagem\quite.png" />
+    <Content Include="Assets\Imagem\quote.png" />
+    <Content Include="Assets\Imagem\recording.png" />
+    <Content Include="Assets\Imagem\recycle.png" />
+    <Content Include="Assets\Imagem\refresh.png" />
+    <Content Include="Assets\Imagem\rewind.png" />
+    <Content Include="Assets\Imagem\rss.png" />
+    <Content Include="Assets\Imagem\site-map.png" />
+    <Content Include="Assets\Imagem\skip-back.png" />
+    <Content Include="Assets\Imagem\skip-forward.png" />
+    <Content Include="Assets\Imagem\skype.png" />
+    <Content Include="Assets\Imagem\small-screen-1.png" />
+    <Content Include="Assets\Imagem\small-screen-2.png" />
+    <Content Include="Assets\Imagem\stack-overflow.png" />
+    <Content Include="Assets\Imagem\star-outline.png" />
+    <Content Include="Assets\Imagem\star.png" />
+    <Content Include="Assets\Imagem\stop.png" />
+    <Content Include="Assets\Imagem\stumbleupon.png" />
+    <Content Include="Assets\Imagem\sync.png" />
+    <Content Include="Assets\Imagem\thumbnails-1.png" />
+    <Content Include="Assets\Imagem\thumbnails-2.png" />
+    <Content Include="Assets\Imagem\twitter.png" />
+    <Content Include="Assets\Imagem\upload.png" />
+    <Content Include="Assets\Imagem\vimeo.png" />
+    <Content Include="Assets\Imagem\wifi.png" />
+    <Content Include="Assets\Imagem\wordpress.png" />
+    <Content Include="Assets\Imagem\youtube.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="README_FIRST.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Phone">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\wp8\Microsoft.Threading.Tasks.Extensions.Phone.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>
