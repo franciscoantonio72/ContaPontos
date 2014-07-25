@@ -31,28 +31,36 @@ namespace ContaPontos
                 host = iso["host"].ToString().Trim();
             else
                 //host = "10.2.25.7:5008";
-                host = "192.168.0.102:11977";
+                host = "10.2.25.202:11977";
+                //host = "192.168.0.102:11977";
             //onLoad(); 
 
         }
         
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            string uri = "http://" + host + "/Pontos/getRetornarListaDesenvolvedores?sprint=104&semana=2";
+            string uri = "http://" + host + "/Pontos/getRetornarListaDesenvolvedores?sprint=106&semana=1";
+
+            //lstPontos.ItemsSource = new Mapeamento<Pontos>().ServicoBusca(uri);
+
+
             //string uri = "http://api.windows8central.in/api/books/";
+
             WebClient client = new WebClient();
             client.Headers["Accept"] = "application/json";
             client.DownloadStringAsync(new Uri(uri));
             client.DownloadStringCompleted += (s1, e1) =>
                 {
-                    var data = JsonConvert.DeserializeObject<Pontos[]>(e1.Result.ToString());
+                    var data = JsonConvert.DeserializeObject<List<Pontos>>(e1.Result.ToString());
                     lstPontos.ItemsSource = data;
                 };
+
+            var teste = lstPontos.ItemsSource;
 
             lblsprint.Text = "106";
             lblSemana.Text = "1";
         }
-        
+
         private async void onLoad()
         {
             HttpClient client = new HttpClient();
