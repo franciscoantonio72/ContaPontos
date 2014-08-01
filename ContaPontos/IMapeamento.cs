@@ -8,6 +8,6 @@ namespace ContaPontos
 {
     interface IMapeamento<T> where T: class
     {
-        IEnumerable<T> ServicoBusca(string uri);
+        IEnumerable<T> ServicoBusca<T>(string uri);
     }
 }

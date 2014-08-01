@@ -16,18 +16,17 @@
 
     <!--<phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Name="lpkItemTemplate">
-            <TextBlock Text="{Binding Pais}" />
+            <TextBlock Text="{Binding NumeroSprint}" />
         </DataTemplate>
         <DataTemplate x:Name="lpkFullItemTemplate">
-            <TextBlock Text="{Binding Pais}" />
+            <TextBlock Text="{Binding NumeroSprint}" />
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>-->
-
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" MinHeight="147"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <!-- LOCALIZATION NOTE:
@@ -54,9 +53,13 @@
             <TextBlock Text="Conta Pontos" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
+        <!--<toolkit:ListPicker x:Name="ListaSprints" FullModeItemTemplate="{Binding lpkFullItemTemplate}" 
+                            ItemTemplate="{Binding lpkItemTemplate}" 
+                            Margin="238,83,12,6" RenderTransformOrigin="0.5,0.5" />-->
+
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Margin="14,43,10,55" Grid.Row="1">
-            <ListBox x:Name="lstPontos">
+        <Grid x:Name="ContentPanel" Margin="12,37,12,61" Grid.Row="1">
+            <ListBox x:Name="lstPontos" SelectionChanged="listbox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Background="DarkOrange" Width="460" Height="100" Margin="0,10,0,0">
@@ -78,11 +81,11 @@
                 </Button.Template>
             </Button>
         </Grid>
-        <Image HorizontalAlignment="Left" Margin="279,579,0,0" Grid.Row="1" Width="55" CacheMode="BitmapCache" Source="/Toolkit.Content/ApplicationBar.Select.png"/>
-        <TextBlock HorizontalAlignment="Left" Margin="61,112,0,0" TextWrapping="Wrap" Text="Sprint" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="252,112,0,0" TextWrapping="Wrap" Text="Semana" VerticalAlignment="Top" RenderTransformOrigin="-0.024,-1.407" Grid.RowSpan="2"/>
-        <TextBlock x:Name="lblSemana" HorizontalAlignment="Left" Margin="252,11,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock x:Name="lblsprint" HorizontalAlignment="Left" Margin="61,11,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Margin="279,579,0,-3" Grid.Row="1" Width="55" CacheMode="BitmapCache" Source="/Toolkit.Content/ApplicationBar.Select.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27,111,0,0" TextWrapping="Wrap" Text="Sprint" VerticalAlignment="Top" Height="27" Width="76"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,111,0,0" TextWrapping="Wrap" Text="Semana" VerticalAlignment="Top" RenderTransformOrigin="-0.024,-1.407" Height="27" Width="70"/>
+        <TextBlock x:Name="lblSemana" HorizontalAlignment="Left" Margin="330,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="82"/>
+        <TextBlock x:Name="lblsprint" HorizontalAlignment="Left" Margin="108,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="82"/>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to
